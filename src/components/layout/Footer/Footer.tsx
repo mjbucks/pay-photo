@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import waxSeal from '../../../assets/footer/wax-seal.png'
 import { footerImages } from '../../../content/images/footer'
 import { primaryNav, galleryNav } from '../../../content/nav'
 import { InstagramIcon } from '../../icons/InstagramIcon'
@@ -28,7 +29,7 @@ export function Footer() {
         </S.NavColumn>
 
         <S.Brand>
-          <S.Seal aria-hidden="true">P</S.Seal>
+          <S.Seal src={waxSeal} alt="Payphotographs wax seal" />
           <S.SocialRow>
             <S.SocialLink href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
               <InstagramIcon />

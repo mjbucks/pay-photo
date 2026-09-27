@@ -11,7 +11,7 @@ export const Heading = styled.h2`
   margin: 0;
   font-family: ${({ theme }) => theme.fonts.script};
   font-weight: 400;
-  font-size: clamp(2.75rem, 8vw, 4.5rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
 `
 
 export const ReviewLink = styled.p`

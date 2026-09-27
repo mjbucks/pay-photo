@@ -28,6 +28,7 @@ export function ResponsiveImage({
         alt={alt}
         loading={loading}
         decoding="async"
+        fetchPriority={loading === 'eager' ? 'high' : 'low'}
       />
     </picture>
   )

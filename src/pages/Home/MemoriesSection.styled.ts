@@ -61,5 +61,5 @@ export const Heading = styled.p`
   margin: 0 0 clamp(0.75rem, 2vw, 1.25rem);
   font-family: ${({ theme }) => theme.fonts.script};
   font-weight: 400;
-  font-size: clamp(1.9rem, 5vw, 3rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
 `

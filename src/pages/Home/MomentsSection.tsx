@@ -11,13 +11,17 @@ export function MomentsSection() {
         sizes="(min-width: 768px) 25vw, 100vw"
       />
       <S.RightCol>
-        <S.MegImage picture={momentsImages.meg.picture} alt={momentsImages.meg.alt} sizes="(min-width: 768px) 22vw, 45vw" />
+        <S.TruckImage
+          picture={momentsImages.truck.picture}
+          alt={momentsImages.truck.alt}
+          sizes="(min-width: 768px) 22vw, 45vw"
+        />
         <S.Heading>your moments matter.</S.Heading>
         <S.BottomRow>
           <S.PhotoFrame>
-            <S.TruckImage
-              picture={momentsImages.truck.picture}
-              alt={momentsImages.truck.alt}
+            <S.MegImage
+              picture={momentsImages.meg.picture}
+              alt={momentsImages.meg.alt}
               sizes="(min-width: 768px) 22vw, 60vw"
             />
             <S.Blurb>

@@ -3,8 +3,8 @@ import { ArrowRightIcon } from '../../components/icons/ArrowRightIcon'
 import { testimonialPairs } from '../../content/testimonials'
 import * as S from './KindWordsSection.styled'
 
-const MIN_QUOTE_FONT_REM = 0.8
-const MAX_QUOTE_FONT_REM = 1.5
+const MIN_QUOTE_FONT_REM = 0.9
+const MAX_QUOTE_FONT_REM = 1.7
 
 // Every card is the same fixed height, so a quote's font size is picked from its length: long
 // reviews shrink to fit that height, short ones grow to fill it rather than leaving it half-empty.

@@ -6,7 +6,7 @@ export const StyledLink = styled(Link)`
   align-items: center;
   gap: 0.5rem;
   font-family: ${({ theme }) => theme.fonts.serif};
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: underline;

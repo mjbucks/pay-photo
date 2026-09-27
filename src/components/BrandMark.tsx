@@ -4,13 +4,13 @@ import styled from 'styled-components'
 
 const Svg = styled.svg`
   display: block;
-  width: clamp(220px, 26vw, 340px);
+  width: clamp(260px, 30vw, 420px);
   height: auto;
   overflow: visible;
 
   text {
     font-family: ${({ theme }) => theme.fonts.script};
-    font-size: 26px;
+    font-size: 30px;
     fill: ${({ theme }) => theme.colors.ivory};
   }
 `

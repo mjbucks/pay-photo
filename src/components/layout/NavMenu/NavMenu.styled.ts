@@ -31,6 +31,6 @@ export const Item = styled.li`
 `
 
 export const CloseButton = styled.button`
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   line-height: 1;
 `

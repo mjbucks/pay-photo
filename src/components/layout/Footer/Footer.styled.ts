@@ -7,13 +7,18 @@ export const Footer = styled.footer`
 
 export const PhotoStrip = styled.div`
   display: flex;
-  height: clamp(90px, 14vw, 150px);
+
+  // Photo 4's subjects' faces sit near the top of the source frame; the default center crop
+  // shows only their shoulders. Shift up so their faces are barely visible at the top edge.
+  > :nth-child(4) img {
+    object-position: 50% 6%;
+  }
 `
 
 export const StripImage = styled(ResponsiveImage)`
   flex: 1;
-  height: 100%;
   min-width: 0;
+  aspect-ratio: 1;
 
   img {
     width: 100%;
@@ -37,6 +42,9 @@ export const Content = styled.div`
   }
 `
 
+// The outer two columns are equal (1fr) and the middle one hugs the stamp's own width, so each
+// outer column spans exactly from the screen edge to the stamp's edge. Centering the nav within
+// it (rather than pinning to start/end) lands the links halfway between the two.
 export const NavColumn = styled.div<{ $align: 'start' | 'end' }>`
   grid-area: ${({ $align }) => ($align === 'start' ? 'navLeft' : 'navRight')};
   display: inline-flex;
@@ -44,10 +52,6 @@ export const NavColumn = styled.div<{ $align: 'start' | 'end' }>`
   align-items: stretch;
   gap: 0.6rem;
   justify-self: center;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    justify-self: ${({ $align }) => $align};
-  }
 `
 
 // Stretches to match the NavList's own width (via the column's align-items: stretch),
@@ -60,14 +64,14 @@ export const Rule = styled.div`
 
 export const NavList = styled.ul`
   display: flex;
-  gap: clamp(1rem, 3vw, 2rem);
+  gap: clamp(1.25rem, 4vw, 2.5rem);
   list-style: none;
   margin: 0;
   padding: 0;
   white-space: nowrap;
 
   a {
-    font-size: 0.75rem;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
     letter-spacing: 0.15em;
     text-transform: uppercase;
     text-decoration: none;
@@ -82,26 +86,15 @@ export const Brand = styled.div`
   gap: 1rem;
 `
 
-export const Seal = styled.div`
-  position: relative;
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  border: 1px solid ${({ theme }) => theme.colors.ivory};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: ${({ theme }) => theme.fonts.script};
-  font-size: 1.75rem;
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: -6px;
-    border: 1px dashed ${({ theme }) => theme.colors.ivory};
-    border-radius: 50%;
-    opacity: 0.5;
-  }
+// The global img{max-width:100%} rule collapses against this grid column's auto (shrink-to-fit)
+// width, capping the seal's width while its explicit height kept growing — max-width: none here
+// overrides that so both dimensions actually apply.
+export const Seal = styled.img`
+  width: clamp(180px, 20vw, 240px);
+  height: clamp(180px, 20vw, 240px);
+  max-width: none;
+  aspect-ratio: 1;
+  object-fit: contain;
 `
 
 export const SocialRow = styled.div`
@@ -110,8 +103,8 @@ export const SocialRow = styled.div`
 `
 
 export const SocialLink = styled.a`
-  width: 28px;
-  height: 28px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   border: 1px solid ${({ theme }) => theme.colors.ivory};
   display: flex;
@@ -119,14 +112,14 @@ export const SocialLink = styled.a`
   justify-content: center;
 
   svg {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
   }
 `
 
 export const Established = styled.p`
   margin: 0;
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.ivoryMuted};

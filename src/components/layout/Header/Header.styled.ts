@@ -45,7 +45,7 @@ export const ExploreButton = styled.button`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.75rem;
+  font-size: 1rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
 `

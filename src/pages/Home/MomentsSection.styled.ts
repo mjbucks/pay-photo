@@ -51,7 +51,7 @@ export const RightCol = styled.div`
 `
 
 // Flush against the section's top-right corner at tablet+, matching the left photo's top-left placement.
-export const MegImage = styled(ResponsiveImage)`
+export const TruckImage = styled(ResponsiveImage)`
   align-self: flex-end;
   width: clamp(160px, 22vw, 440px);
   aspect-ratio: 3 / 2;
@@ -78,7 +78,7 @@ export const Heading = styled.h2`
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.script};
   font-weight: 400;
-  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   padding: 0 clamp(1rem, 5vw, 2rem);
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -109,7 +109,7 @@ export const PhotoFrame = styled.div`
   width: clamp(220px, 22vw, 440px);
 `
 
-export const TruckImage = styled(ResponsiveImage)`
+export const MegImage = styled(ResponsiveImage)`
   display: block;
   width: 100%;
   aspect-ratio: 3 / 4;
@@ -129,11 +129,11 @@ export const TruckImage = styled(ResponsiveImage)`
 export const Blurb = styled.p`
   margin: 1rem 0 0;
   width: 100%;
-  max-width: 22rem;
+  max-width: 26rem;
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.serif};
   font-style: italic;
-  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
   line-height: 1.6;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -141,7 +141,7 @@ export const Blurb = styled.p`
     z-index: 1;
     top: 60%;
     left: 100%;
-    width: clamp(14rem, 20vw, 19rem);
+    width: clamp(17rem, 24vw, 23rem);
     max-width: none;
     margin: 0 0 0 -2.5rem;
     text-align: left;
